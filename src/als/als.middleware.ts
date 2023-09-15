@@ -7,7 +7,7 @@ export class AlsMiddleware implements NestMiddleware {
 
   use(req: any, res: any, next: () => void) {
     const store = {
-      apiKey: req.headers['x-api-key']
+      apiKeyAls: req.headers['x-api-key']
     }
     this.als.run(store, () => {
       next()
